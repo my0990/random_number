@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/random_number/static/css/main.c219f392.chunk.css",
+    "main.js": "/random_number/static/js/main.5369c540.chunk.js",
+    "main.js.map": "/random_number/static/js/main.5369c540.chunk.js.map",
+    "runtime-main.js": "/random_number/static/js/runtime-main.e91b014c.js",
+    "runtime-main.js.map": "/random_number/static/js/runtime-main.e91b014c.js.map",
+    "static/js/2.278e30de.chunk.js": "/random_number/static/js/2.278e30de.chunk.js",
+    "static/js/2.278e30de.chunk.js.map": "/random_number/static/js/2.278e30de.chunk.js.map",
+    "static/js/3.af8b6dca.chunk.js": "/random_number/static/js/3.af8b6dca.chunk.js",
+    "static/js/3.af8b6dca.chunk.js.map": "/random_number/static/js/3.af8b6dca.chunk.js.map",
+    "index.html": "/random_number/index.html",
+    "static/css/main.c219f392.chunk.css.map": "/random_number/static/css/main.c219f392.chunk.css.map",
+    "static/js/2.278e30de.chunk.js.LICENSE.txt": "/random_number/static/js/2.278e30de.chunk.js.LICENSE.txt",
+    "static/media/cannon.e296de57.png": "/random_number/static/media/cannon.e296de57.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e91b014c.js",
+    "static/js/2.278e30de.chunk.js",
+    "static/css/main.c219f392.chunk.css",
+    "static/js/main.5369c540.chunk.js"
+  ]
+}

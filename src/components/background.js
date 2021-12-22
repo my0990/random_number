@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import styled from 'styled-components';
 import img from '../cannon.png';
 import InputModal from './inputModal';
+import {useTransition, animated, config } from 'react-spring';
 
 const Wrapper = styled.div`
     width: 1100px;
@@ -64,13 +65,13 @@ const CannonBall = styled.div`
     transform: translateX(-65%);
     background: rgb(45, 194, 84)
 `
-const AnimatedBall = styled.div`
+const AnimatedBall = styled(animated.div)`
     position: absolute;
     width: 100px;
     height: 100px;
-    border-radius: 100px;
+    border-radius: 100%;
     bottom: 125px;
-    left: 50%;
+    left: 44%;
     transform: translateX(-65%);
     background: rgb(45, 194, 84);
 `
@@ -82,15 +83,26 @@ export default function Background(){
         setLastNumber(number);
     };
     const handleClick = () => {
-        setIsFirstClicked(true)
-    }
+        setIsFirstClicked(true);
+        setToggle(toggle + 1);
+    };
+    const [toggle,setToggle] = useState(true);
+    const transition = useTransition(toggle, {
+        from: {y: 50, width: 100, x: 0, height: 100},
+        enter: {y: -300, width:400, x: -130, height: 400},
+        config: config.wobbly
+      })
     return(
     <Wrapper>
         <Grass2 />
         <Grass1 />
         {isFirstClicked ? null : <CannonBall />}
+        {transition((style,item)=>
+        item ? <AnimatedBall style={style}/>: ''
+        )}
         <Cannon />
         <Button onClick={()=>{handleClick()}}/>
+        
         <InputModal getNumber={getNumber}/>
         
     </Wrapper>

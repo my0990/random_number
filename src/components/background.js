@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import styled from 'styled-components';
 import img from '../cannon.png';
 import InputModal from './inputModal';
@@ -85,6 +85,7 @@ export default function Background(){
     const handleClick = () => {
         setIsFirstClicked(true);
         setToggle(toggle + 1);
+
     };
     const [toggle,setToggle] = useState(true);
     const transition = useTransition(toggle, {
@@ -92,17 +93,19 @@ export default function Background(){
         enter: {y: -300, width:400, x: -130, height: 400},
         config: config.wobbly
       })
+
+
+    
     return(
     <Wrapper>
         <Grass2 />
         <Grass1 />
         {isFirstClicked ? null : <CannonBall />}
         {transition((style,item)=>
-        item ? <AnimatedBall style={style}/>: ''
+        item ? <AnimatedBall style={style}>111</AnimatedBall>: ''
         )}
         <Cannon />
         <Button onClick={()=>{handleClick()}}/>
-        
         <InputModal getNumber={getNumber}/>
         
     </Wrapper>

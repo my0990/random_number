@@ -84,7 +84,7 @@ export default function Background(){
     const [lastNumber,setLastNumber] = useState(0);
     const [numArr,setNumArr] = useState([]);
     const [isFirstClicked,setIsFirstClicked] = useState(false);
-    const [pickedNumber,setPickedNumber] = useState();
+    const [pickedNumber,setPickedNumber] = useState([]);
     const getNumber = (number) => {
         let tempArr = [];
         for(let i=0;i<number;i++){

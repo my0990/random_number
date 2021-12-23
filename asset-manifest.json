@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/random_number/static/css/main.c219f392.chunk.css",
-    "main.js": "/random_number/static/js/main.dab3004b.chunk.js",
-    "main.js.map": "/random_number/static/js/main.dab3004b.chunk.js.map",
+    "main.css": "/random_number/static/css/main.38410500.chunk.css",
+    "main.js": "/random_number/static/js/main.a278a9d3.chunk.js",
+    "main.js.map": "/random_number/static/js/main.a278a9d3.chunk.js.map",
     "runtime-main.js": "/random_number/static/js/runtime-main.1256ae88.js",
     "runtime-main.js.map": "/random_number/static/js/runtime-main.1256ae88.js.map",
     "static/css/2.4659568d.chunk.css": "/random_number/static/css/2.4659568d.chunk.css",
@@ -12,7 +12,7 @@
     "static/js/3.dc7df0c6.chunk.js.map": "/random_number/static/js/3.dc7df0c6.chunk.js.map",
     "index.html": "/random_number/index.html",
     "static/css/2.4659568d.chunk.css.map": "/random_number/static/css/2.4659568d.chunk.css.map",
-    "static/css/main.c219f392.chunk.css.map": "/random_number/static/css/main.c219f392.chunk.css.map",
+    "static/css/main.38410500.chunk.css.map": "/random_number/static/css/main.38410500.chunk.css.map",
     "static/js/2.e4b26f0c.chunk.js.LICENSE.txt": "/random_number/static/js/2.e4b26f0c.chunk.js.LICENSE.txt",
     "static/media/cannon.e296de57.png": "/random_number/static/media/cannon.e296de57.png"
   },
@@ -20,7 +20,7 @@
     "static/js/runtime-main.1256ae88.js",
     "static/css/2.4659568d.chunk.css",
     "static/js/2.e4b26f0c.chunk.js",
-    "static/css/main.c219f392.chunk.css",
-    "static/js/main.dab3004b.chunk.js"
+    "static/css/main.38410500.chunk.css",
+    "static/js/main.a278a9d3.chunk.js"
   ]
 }

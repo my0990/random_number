@@ -74,18 +74,40 @@ const AnimatedBall = styled(animated.div)`
     left: 44%;
     transform: translateX(-65%);
     background: rgb(45, 194, 84);
+    font-size: 10em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 `
 
 export default function Background(){
     const [lastNumber,setLastNumber] = useState(0);
+    const [numArr,setNumArr] = useState([]);
     const [isFirstClicked,setIsFirstClicked] = useState(false);
+    const [pickedNumber,setPickedNumber] = useState();
     const getNumber = (number) => {
+        let tempArr = [];
+        for(let i=0;i<number;i++){
+            tempArr.push(i);
+        }
         setLastNumber(number);
+        setNumArr(tempArr);
     };
+
+
     const handleClick = () => {
         setIsFirstClicked(true);
         setToggle(toggle + 1);
-
+        let randomNumber = Math.random()*lastNumber;
+        let tempArr = numArr;
+        let popped = tempArr.splice(randomNumber,1);
+        setPickedNumber(popped);
+        setNumArr(tempArr);
+        if(lastNumber!==0){
+        setLastNumber(lastNumber - 1);
+        } else {
+            alert('번호끝!')
+        }
     };
     const [toggle,setToggle] = useState(true);
     const transition = useTransition(toggle, {
@@ -94,7 +116,6 @@ export default function Background(){
         config: config.wobbly
       })
 
-
     
     return(
     <Wrapper>
@@ -102,7 +123,7 @@ export default function Background(){
         <Grass1 />
         {isFirstClicked ? null : <CannonBall />}
         {transition((style,item)=>
-        item ? <AnimatedBall style={style}>111</AnimatedBall>: ''
+        item ? <AnimatedBall style={style}>{pickedNumber.length ? parseInt(pickedNumber) + 1 : ''}</AnimatedBall>: ''
         )}
         <Cannon />
         <Button onClick={()=>{handleClick()}}/>

@@ -92,8 +92,9 @@ export default function Background(){
         }
         setLastNumber(number);
         setNumArr(tempArr);
+        setIsFirstClicked(false);
     };
-
+    const [isStarted,setIsStarted] = useState(false);
 
     const handleClick = () => {
         setIsFirstClicked(true);
@@ -106,7 +107,10 @@ export default function Background(){
         if(lastNumber!==0){
         setLastNumber(lastNumber - 1);
         } else {
-            alert('번호끝!')
+            alert('번호를 모두 뽑았습니다.')
+            setIsFirstClicked(false);
+            setIsStarted(false);
+            
         }
     };
     const [toggle,setToggle] = useState(true);
@@ -121,13 +125,13 @@ export default function Background(){
     <Wrapper>
         <Grass2 />
         <Grass1 />
-        {isFirstClicked ? null : <CannonBall />}
-        {transition((style,item)=>
+        {isFirstClicked ? transition((style,item)=>
         item ? <AnimatedBall style={style}>{pickedNumber.length ? parseInt(pickedNumber) + 1 : ''}</AnimatedBall>: ''
-        )}
+        ) : <CannonBall />}
+        
         <Cannon />
         <Button onClick={()=>{handleClick()}}/>
-        <InputModal getNumber={getNumber}/>
+        <InputModal getNumber={getNumber} setIsStarted={setIsStarted} isStarted={isStarted}/>
         
     </Wrapper>
     )

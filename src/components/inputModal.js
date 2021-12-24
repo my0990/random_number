@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useRef} from 'react';
 import styled from 'styled-components';
 import { Button } from 'react-bootstrap';
 
@@ -37,14 +37,15 @@ const buttonStyle = {
 
 
 function InputModal(props) {
-    const [isStarted,setIsStarted] = useState(false);
+    const numRef = useRef();
     const [lastNumber,setLastNumber] = useState(0);
     const handleClicked = () => {
-        setIsStarted(!isStarted);
+        props.setIsStarted(!props.isStarted);
         props.getNumber(lastNumber);
+        setLastNumber(0);
     };
     
-    if(isStarted === false){
+    if(props.isStarted === false){
         return(
             <Container>
                 <div>

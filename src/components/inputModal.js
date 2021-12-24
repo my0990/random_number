@@ -8,7 +8,7 @@ const Container = styled.div`
     height: 400px;
     background: rgb(146, 150, 138);
     position: absolute;
-    bottom: 150px;
+    bottom: 300px;
     left: 50%;
     transform: translateX(-50%);
     border-radius: 20px;

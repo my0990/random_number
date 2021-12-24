@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import img from '../cannon.png';
 import InputModal from './inputModal';
 import {useTransition, animated, config } from 'react-spring';
+import cannon from './cannon.mp3';
 
 const Wrapper = styled.div`
     width: 1100px;
@@ -95,7 +96,7 @@ export default function Background(){
         setIsFirstClicked(false);
     };
     const [isStarted,setIsStarted] = useState(false);
-
+    var audio = new Audio(cannon);
     const handleClick = () => {
         setIsFirstClicked(true);
         setToggle(toggle + 1);
@@ -106,11 +107,11 @@ export default function Background(){
         setNumArr(tempArr);
         if(lastNumber!==0){
         setLastNumber(lastNumber - 1);
+        audio.play();
         } else {
             alert('번호를 모두 뽑았습니다.')
             setIsFirstClicked(false);
             setIsStarted(false);
-            
         }
     };
     const [toggle,setToggle] = useState(true);
@@ -132,6 +133,7 @@ export default function Background(){
         <Cannon />
         <Button onClick={()=>{handleClick()}}/>
         <InputModal getNumber={getNumber} setIsStarted={setIsStarted} isStarted={isStarted}/>
+        
         
     </Wrapper>
     )

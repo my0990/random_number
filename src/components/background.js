@@ -13,7 +13,7 @@ const Wrapper = styled.div`
     position: relative;
     background: linear-gradient(blue, white);
     @media screen and (max-width: 768px){
-        width: 100wh;
+        max-width: 100wh;
       }
 `
 

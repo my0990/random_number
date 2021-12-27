@@ -12,6 +12,9 @@ const Wrapper = styled.div`
     margin: 0 auto;
     position: relative;
     background: linear-gradient(blue, white);
+    @media screen and (max-width: 768px){
+        width: 100wh;
+      }
 `
 
 const Grass1 = styled.div`

@@ -14,6 +14,7 @@ const Wrapper = styled.div`
     background: linear-gradient(blue, white);
     @media screen and (max-width: 768px){
         max-width: 100wh;
+        overflow-x: hidden;
       }
 `
 
